@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 
-namespace SerpisAd
+namespace  PSerpisAd
 {
 	public class PersisterHelper
 	{
