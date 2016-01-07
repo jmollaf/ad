@@ -30,7 +30,7 @@ public class PruebaArticulo {
             	        	 Statement stmt = (Statement) connection.createStatement();
             	        	 ResultSet rs = stmt.executeQuery("Select * From articulo");
             	        	 while(rs.next()) {
-            	        		  System.out.print(rs.getString("id")+". ");
+            	        		  System.out.println(rs.getString("id")+".");
             	        		  System.out.println(rs.getString("nombre"));
             	        	 }
             	        	 break;

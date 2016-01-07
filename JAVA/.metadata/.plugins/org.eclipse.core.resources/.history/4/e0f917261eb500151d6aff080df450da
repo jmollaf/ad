@@ -2,16 +2,14 @@ package org.institutoserpis.org;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.Statement;
 import java.sql.SQLException;
-import java.sql.ResultSet;
 import java.util.Scanner;
 
 public class PruebaArticulo {
              public static void main(String[] args) throws SQLException {
             	    Connection connection = DriverManager.getConnection(
             	    		"jdbc:mysql://localhost/dbprueba", "root", "sistemas");
-            	    //connection.close();
+            	    connection.close();
             	    //System.out.println("fin");
             	    int opcionMenu=0;
             	    Scanner tec = new Scanner (System.in);
@@ -26,13 +24,7 @@ public class PruebaArticulo {
             	        opcionMenu = tec.nextInt();
             	        switch(opcionMenu){
             	        case 1:
-            	        	 System.out.println("----MOSTRAR DATOS----");
-            	        	 Statement stmt = (Statement) connection.createStatement();
-            	        	 ResultSet rs = stmt.executeQuery("Select * From articulo");
-            	        	 while(rs.next()) {
-            	        		  System.out.print(rs.getString("id")+". ");
-            	        		  System.out.println(rs.getString("nombre"));
-            	        	 }
+            	        	 //System.out.println("1"); 	
             	        	 break;
             	        case 2: 
             	        	 //System.out.println("2");
