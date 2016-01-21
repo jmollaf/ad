@@ -14,22 +14,12 @@ public static void main(String[] args) {
 	
 	EntityManager entityManager = entityManagerFactory.createEntityManager();
 	entityManager.getTransaction().begin();
-	//LISTAR ARTICULOS
 	List<Articulo> articulos = entityManager.createQuery("from Articulo",Articulo.class).getResultList();
 	for(Articulo articulo : articulos)
-		System.out.println(articulo.getNombre()+" "+articulo.getId());
+		System.out.println(articulo.getNombre());
 	entityManager.getTransaction().commit();
 	entityManager.close();
 	entityManagerFactory.close();
-	//BORRAR ARTICULO
-	EntityManagerFactory entityManagerFactoryDelete = Persistence.createEntityManagerFactory("org.institutoserpis.ad");
-	EntityManager entityManagerDelete = entityManagerFactoryDelete.createEntityManager();
-	entityManagerDelete.getTransaction().begin();
-	Articulo articulo=entityManagerDelete.find(Articulo.class, 1L);
-	entityManagerDelete.remove(articulo);
-	entityManagerDelete.getTransaction().commit();
-	entityManagerDelete.close();
-	entityManagerFactoryDelete.close();
-}
+	}
 
 }

@@ -25,7 +25,7 @@ public static void main(String[] args) {
 	EntityManagerFactory entityManagerFactoryDelete = Persistence.createEntityManagerFactory("org.institutoserpis.ad");
 	EntityManager entityManagerDelete = entityManagerFactoryDelete.createEntityManager();
 	entityManagerDelete.getTransaction().begin();
-	Articulo articulo=entityManagerDelete.find(Articulo.class, 1L);
+	Articulo articulo=entityManagerDelete.find(Articulo.class, 1);
 	entityManagerDelete.remove(articulo);
 	entityManagerDelete.getTransaction().commit();
 	entityManagerDelete.close();
