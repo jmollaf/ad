@@ -21,8 +21,9 @@ public class Articulo {
 	public Articulo(Long id){
 		  this.id=id;
 	}
-	public Articulo(String nombre, Long categoria, BigDecimal precio) {
+	public Articulo(/*Long id,*/ String nombre, Long categoria, BigDecimal precio) {
 	super();
+	//this.id = id;
 	this.nombre = nombre;
 	this.categoria = categoria;
 	this.precio = precio;

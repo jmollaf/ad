@@ -35,7 +35,7 @@ public static void main(String[] args) {
 	EntityManagerFactory entityManagerFactoryInsert = Persistence.createEntityManagerFactory("org.institutoserpis.ad");
 	EntityManager entityManagerInsert = entityManagerFactoryInsert.createEntityManager();
 	entityManagerInsert.getTransaction().begin();
-	Articulo articuloInsertar = new Articulo("Articulo200",2L,new BigDecimal(200));
+	Articulo articulo = new Articulo("Articulo200",2L,new BigDecimal(200));
 	
 }
 
